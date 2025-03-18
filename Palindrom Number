@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    long num;
+    printf("Enter the number:->");
+    scanf("%d",&num);
+    long rev=0;
+    long a =num;
+    while(a!=0){
+        long b=a%10;
+        rev=(rev*10)+b;
+        a/=10;
+    }
+    if(rev==num){
+        printf("%ld is palindrom",num);
+
+    }
+    else{
+        printf("%ld is not palindrom",num);
+    }
+    return 0;
+}
