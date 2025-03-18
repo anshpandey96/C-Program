@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("Enter a number:->");
+    scanf("%d", &num);
+    int sum = 0;
+    int cube;
+    int a = num;
+    while (num > 0)
+    {
+        int rem = num % 10;
+        cube = rem * rem * rem;
+        sum = sum + cube;
+        num = num / 10;
+    }
+    num = a;
+    if (num == sum)
+    {
+        printf("Armstrong number:");
+    }
+    else
+    {
+        printf("Not Armstrong number:");
+    }
+    return 0;
+}
