@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int n,a;
+    long fact=1;
+    printf("Enter the number:->");
+    scanf("%d",&n);
+    for(a=n;a>=1;a--){
+    fact*=a;
+    }
+    printf("THe facorila of %d is %ld",n,fact);
+
+    return 0;
+}
