@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+#include<cmath>  // For sqrt()
+using namespace std;
+
+int main() {
+    double a, b, h;  // Use double for precision
+
+    cout << "Enter the length of side a: ";
+    cin >> a;
+
+    cout << "Enter the length of side b: ";
+    cin >> b;
+
+    h = sqrt((a * a) + (b * b));  // Pythagorean theorem
+
+    cout << "The hypotenuse (h) is: " << h << endl;
+
+    return 0;
+}
