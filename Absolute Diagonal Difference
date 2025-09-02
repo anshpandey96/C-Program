@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i, j;
+    printf("Enter matrix size (n x n): ");
+    scanf("%d", &n);
+
+    int mat[n][n];
+    printf("Enter matrix elements:\n");
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            scanf("%d", &mat[i][j]);
+
+    int d1 = 0, d2 = 0;
+    for (i = 0; i < n; i++) {
+        d1 += mat[i][i];
+        d2 += mat[i][n - i - 1];
+    }
+
+    printf("Absolute Diagonal Difference: %d\n", abs(d1 - d2));
+    return 0;
+}
