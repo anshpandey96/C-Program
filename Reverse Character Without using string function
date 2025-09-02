@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void reverse(char *start, char *end) {
+    while (start < end) {
+        char temp = *start;
+        *start++ = *end;
+        *end-- = temp;
+    }
+}
+
+int main() {
+    char str[100];
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    char *word_start = str;
+    char *temp = str;
+
+    while (*temp) {
+        if (*temp == ' ' || *temp == '\n') {
+            reverse(word_start, temp - 1);
+            word_start = temp + 1;
+        }
+        temp++;
+    }
+
+    printf("Reversed words: %s", str);
+    return 0;
+}                      
