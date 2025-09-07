@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+void fillSpiral(int n, int matrix[n][n], char *digits) {
+    int top = 0, bottom = n - 1, left = 0, right = n - 1;
+    int k = 0;
+
+    while (top <= bottom && left <= right) {
+        for (int i = left; i <= right && k < strlen(digits); i++)
+            matrix[top][i] = digits[k++] - '0';
+        top++;
+
+        for (int i = top; i <= bottom && k < strlen(digits); i++)
+            matrix[i][right] = digits[k++] - '0';
+        right--;
+
+        for (int i = right; i >= left && k < strlen(digits); i--)
+            matrix[bottom][i] = digits[k++] - '0';
+        bottom--;
+
+        for (int i = bottom; i >= top && k < strlen(digits); i--)
+            matrix[i][left] = digits[k++] - '0';
+        left++;
+    }
+}
+
+int main() {
+    char digits[100];
+    printf("Enter a number: ");
+    scanf("%s", digits);
+
+    int len = strlen(digits);
+    int n = ceil(sqrt(len)); // Smallest square matrix to fit all digits
+
+    int matrix[n][n];
+    memset(matrix, 0, sizeof(matrix));
+
+    fillSpiral(n, matrix, digits);
+
+    printf("\nSpiral Matrix:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            printf("%d ", matrix[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
