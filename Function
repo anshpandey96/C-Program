@@ -1,0 +1,36 @@
+public class Function {
+   public   static void main(String[]args) {
+        printFirstPattern();
+    //    printSecondPatter();
+    }
+//        System.out.println("In main method");
+//        greetUser();
+//        System.out.println("Method calling complete");
+//        greetUser();
+//    }
+//        public  static void greetUser (){
+//        System.out.println("Good Morning ansh ");
+//      public static void printSecondPatter(){
+//
+//          System.out.println("______*");
+//          System.out.println("_____**");
+//          System.out.println("____***");
+//          System.out.println("___****");
+//          System.out.println("__*****");
+//      }
+////    }
+        public static void printFirstPattern(){
+            int rows = 0;
+            while ( rows < 20){
+                System.out.print("*");
+                int i = 0;
+                while( i < rows ){
+                    System.out.print(" *");
+                         i++;
+                }
+                   System.out.println();
+                   rows++;
+            }
+        }
+}
+
