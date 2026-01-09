@@ -1,0 +1,19 @@
+
+     public static void main(String[] args) {
+// this is my new  program
+
+         System.out.println("Hello World ");
+
+         /*
+         this is the first line of the  comment
+         this comment is still continuing
+         hello friends this is first program
+          */
+/**
+ * this is my main method
+ * @param  args
+ *
+ */
+
+    }
+}
