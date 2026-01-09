@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Return {
+    public static void main(String[] args) {
+        greet();
+                int first = readNumber() + 2;   //we can use function as a variable or value;
+                int second = readNumber()+ 5;  // here in function add 5 in a function ;
+
+                int sum = first + second;
+        System.out.println("Sum of the number is " + sum );
+    }
+     public static int readNumber(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter your number: ");
+        int number = input.nextInt();
+        return number;
+    }
+         public static void greet(){
+           System.out.println("Welcome to Calculator :\n");
+       }
+}
