@@ -1,0 +1,18 @@
+public class Parameter {
+    public static void main(String[] args) {
+     //   int num = sumTwoNumber( 4,7);    //argument
+     //   System.out.println(num);
+        System.out.println(sumTwoNumber(4,-7));
+        System.out.println(sumTwoNumber(46,7));
+        System.out.println(sumTwoNumber(4,45));
+        System.out.println(sumTwoNumber(4,12));
+    }
+
+    public static int sumTwoNumber(int firstNum, int secondNum) {
+        System.out.println("First Number received :" + firstNum);
+        System.out.println("Second Number received :" + secondNum);//parameters
+      //  int sum = first + second;
+        return firstNum + secondNum;
+    }
+
+}
